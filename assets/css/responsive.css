@@ -36,11 +36,11 @@
         text-align: center
     }
     .mobile-nav .logo {
-        width: 75px;
-        top: 10px !important
+        width: 70px;
+        top: 1px !important
     }
     .mobile-nav.mean-container .mean-nav ul li a.active {
-        color: #0046c0
+        color:  #2fb7c3
     }
     .nav-srh {
         display: none
@@ -2756,7 +2756,7 @@
         font-size: 20px
     }
     .mean-container .mean-bar {
-        background-color: #0046c0;
+        background-color: #2fb7c3;
         padding: 0
     }
     .mean-container a.meanmenu-reveal {
