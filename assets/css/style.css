@@ -227,7 +227,8 @@ button:focus {
     background: #fff;
     padding-top: 0;
     padding-bottom: 0;
-    position: relative
+    position: relative;
+    background-color: #208a94;
 }
 
 .main-nav nav {
@@ -290,14 +291,14 @@ button:focus {
 .main-nav nav .navbar-nav .nav-item a {
     font-weight: 500;
     font-size: 16px;
-    color: #4a6f8a;
+    color: white;
     text-transform: capitalize
 }
 
 .main-nav nav .navbar-nav .nav-item a:hover,
 .main-nav nav .navbar-nav .nav-item a:focus,
 .main-nav nav .navbar-nav .nav-item a.active {
-    color: #2fb7c3;
+    color: white;
 }
 
 .search-icon {
@@ -1665,7 +1666,7 @@ footer {
 }
 
 .slider-item-img-two {
-    background-image: url(../img/doctor1.jpg);  
+    background-image: url(../img/blurred-background-vintage-filter-patient-waiting-see-doctor-01.jpg);  
 }
 .head1{
     color: white;
