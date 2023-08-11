@@ -1666,10 +1666,10 @@ footer {
 }
 
 .slider-item-img-two {
-    background-image: url(../img/blurred-background-vintage-filter-patient-waiting-see-doctor-01.jpg);  
+    background-image: url(../img/DR.\ Prasad-01-01.jpg);  
 }
 .head1{
-    color: white;
+    color: black;
 }
 .slider-item-img-three {
     background-image: url(../img/home-two/slider/2.jpg)
@@ -1718,19 +1718,19 @@ footer {
 
 .home-slider-two .slider-item .slider-text .common-btn a {
     border: 2px solid #2fb7c3;
-    color: #fff;
+    color: black;
     background-color: #2fb7c3;
     position: relative
 }
 
 .home-slider-two .slider-item .slider-text .common-btn a:hover {
-    color: #2fb7c3;
-    background-color: transparent
+    color: white;
+    /* background-color: transparent */
 }
 
 .home-slider-two .slider-item .slider-text .common-btn .cmn-btn-right {
-    background-color: transparent;
-    color: #2fb7c3
+    background-color: #2fb7c3;
+    color: black
 }
 
 .home-slider-two .slider-item .slider-text .common-btn .cmn-btn-right:hover {
@@ -2675,6 +2675,9 @@ footer {
 .page-title-one {
     background-image: url(../img/doctor/1.jpg)
 }
+.contact1 {
+    background-image: url(../img/contact/title1.jpg)
+}
 
 .page-title-area {
     background-size: cover;
@@ -3556,7 +3559,7 @@ footer {
 }
 
 .page-title-five {
-    background-image: url(../aboutimg/contact.jpg)
+    background-image: url(../img/contact/title1.jpg)
 }
 
 .page-title-five .page-title-item {
@@ -3564,7 +3567,7 @@ footer {
 }
 
 .location-wrap {
-    background-image: url(../img/home-one/3.png);
+    background-image: url(../img/home-one/);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -3810,7 +3813,7 @@ footer {
 }
 
 .footer-two {
-    padding-top: 100px
+    padding-top: 40px
 }
 
 .error-item {
