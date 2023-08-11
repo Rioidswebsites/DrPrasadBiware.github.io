@@ -126,7 +126,7 @@ jQuery(function($) {
         jQuery(".loader").fadeOut(500);
     });
     new WOW().init();
-    $('body').append('<div id="toTop" class="back-to-top-btn"><i class="icofont-hand-drawn-up"></i></div>');
+    // $('body').append('<div id="toTop" class="back-to-top-btn"><i class="icofont-hand-drawn-up"></i></div>');
     $(window).scroll(function() {
         if ($(this).scrollTop() != 0) {
             $('#toTop').fadeIn();
@@ -184,8 +184,8 @@ jQuery(function($) {
         url: "https://envytheme.us20.list-manage.com/subscribe/post?u=60e1ffe2e8a68ce1204cd39a5&amp;id=42d6d188d9",
         callback: callbackFunction
     });
-    $('body').append("<a href='https://themeforest.net/checkout/from_item/26021370?license=regular&support=bundle_6month&_ga=2.7145461.634514020.1646539215-1425290503.1590986634' target='_blank' class='buy-now-btn'><img src='assets/img/envato.png' alt='envato'/>Buy Now</a>");
-    $('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
+    // $('body').append("<a href='https://themeforest.net/checkout/from_item/26021370?license=regular&support=bundle_6month&_ga=2.7145461.634514020.1646539215-1425290503.1590986634' target='_blank' class='buy-now-btn'><img src='assets/img/envato.png' alt='envato'/>Buy Now</a>");
+    // $('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
 }(jQuery));
 
 function setTheme(themeName) {
