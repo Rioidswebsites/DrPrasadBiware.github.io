@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/meanmenu.css" />
 
     <link rel="stylesheet" href="assets/css/icofont.min.css" />
+    <script src="https://kit.fontawesome.com/8de71d6583.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="assets/css/slick.min.css" />
     <link rel="stylesheet" href="assets/css/slick-theme.min.css" />
@@ -30,6 +31,45 @@
     <title>Care Clinic</title>
     <link rel="icon" type="image/png" href="assets/img/Logo-01.png" />
   </head>
+  <style>
+    .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:20;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    filter: blur(5px); /* blur effect */
+    z-index: 9999;
+    display: none;
+    
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    overflow: hidden;
+  /* border-radius: 5px; */
+    z-index: 10000;
+    display: none;
+}
+.popup-content {
+width:"1px"
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+  </style>
 
   <body>
     <div class="header-top">
@@ -127,16 +167,107 @@
                 <li class="nav-item">
                   <a href="contact.html" class="nav-link">Contact Us</a>
                 </li>
-               
               </ul>
               <div class="appointment">
-                <button type="button" class="btn btn-info position-absolute" style="background-color: white;position: absolute;color: black; right: 100px;bottom:35px; font-weight: 500;filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));">Appointment</button>
-                </div>
+                <a href="#" id="open-popup-btns" class="btn btn-info" style="background-color: white;position: absolute;color: black; right: 40px;bottom:35px; font-weight: 500;filter:  drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));">Appointment</a>
+            </div>
             </div>
           </nav>
         </div>
       </div>
     </div>
+
+    <!------------------------Appointment--------------------------------------->
+<div class="flex items-center gap-6">
+  <div>
+      <div id="popups" class="popup">
+        <div class="container-fluid p-0">
+          <div class="appointment-item">
+            <i id="close-popup-btns" class="fa-solid fa-x" style="position: absolute; top:10px; right: 15px; font-size: 20px; cursor: pointer;" id="myModal" class="close-popup"
+            ></i>
+            <center><h2 class="-mt-15">Book your appointment</h2></center>
+            <br>
+            <div class="appointment-form">
+              <form id="myForm"
+              id="bookingForm"
+              novalidate  method="POST" onsubmit="sendEmail()">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <i class="icofont-business-man-alt-1"></i>
+                      <label>Name</label>
+                      <input
+                        type="text"
+                        id="name" name="bookingname"  autocomplete="off"
+                        class="form-control"
+                        placeholder="Enter Your Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <i class="icofont-ui-message"></i>
+                      <label>Email</label>
+                      <input
+                        type="email"
+                        name="bookingemail" class="form-control" autocomplete="off"
+                        placeholder="Enter Your Email"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <i class="icofont-ui-call"></i>
+                      <label>Phone</label>
+                      <input
+                        type="text"
+                        id="phone" name="bookingphone" class="form-control" autocomplete="off"
+                        placeholder="Enter Your Number"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" id="submitBtn"  class="btn appointment-btn">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+          </div>
+          </div>
+      </div>
+  <div id="overlays" class="overlay w-full "></div>
+  <script>
+    const openPopupBtns = document.getElementById('open-popup-btns');
+    const closePopupBtns = document.getElementById('close-popup-btns');
+    const popups = document.getElementById('popups');
+    const overlays = document.getElementById('overlays');
+    openPopupBtns.addEventListener('click', () => {
+        popups.style.display = 'block';
+        overlays.style.display = 'block';
+    });
+    closePopupBtns.addEventListener('click', () => {
+        popups.style.display = 'none';
+        overlays.style.display = 'none';
+    });
+const closePopupButtons = document.querySelectorAll('.close-popup');
+const contactFormPopup = document.getElementById('contact-form-popup');
+closePopupButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        contactFormPopup.style.display = 'none'; 
+    });
+});
+contactFormPopup.addEventListener('click', (event) => {
+    if (event.target === contactFormPopup) {
+        contactFormPopup.style.display = 'none';
+    }
+});
+</script>
+<!----------------------------End---------------------------------------------->
 
 
     <div class="about-area pt-100 pb-70">
