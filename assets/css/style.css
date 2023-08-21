@@ -1822,9 +1822,35 @@ footer {
     margin-bottom: 0;
     font-size: 14px
 }
-
+@media (max-width: 768px) {
+    /* Hide the button on mobile devices */
+    .btn.btn-info {
+      display: none;
+    }
+  }
+@media (max-width: 768px) {
+    /* Hide the button on mobile devices */
+    .common-btn1 a  {
+      display: none;
+    }
+    .slider-item-img-two {
+        background-image:none;  
+    }
+    .youtube{
+        position: relative;
+        top: -50;
+    }
+  }
+  @media (min-width: 769px) {
+    /* Add responsive styles for laptops here */
+    /* For example, you can adjust the layout, font sizes, or padding */
+    .btn.btn-info {
+        position: absolute;
+        right: 10px;
+      }
+  }
 .welcome-left {
-    background-image: url(../img/doctor12.jpeg);
+    background-image: url(../img/DR.\ Prasad-01-01.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
